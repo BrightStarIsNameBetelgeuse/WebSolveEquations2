@@ -2,14 +2,16 @@
     var gear = document.getElementById("gear");
     var start_elem = $('.site-welcome');
     var count = 0;
-    $('.site-welcome').on('mousewheel', function (event) {
+    $('body').on('mousewheel', function (event) {
         var delta = event.originalEvent.wheelDeltaY;
         if(delta < 0)
-            $(this).css('top', '-80%');
+            $('.site-welcome').css('top', '-100%');
         if (delta > 0) {
-            $(this).css('top', '0');
+            $('.site-welcome').css('top', '0');
         }
+        console.log('delta is ' + delta);
     });
+    
     $('#gear').on('mousewheel', function (event) {
         //var delta = event.originalEvent.wheelDeltaY;
         var delta = event.originalEvent.movementY;
@@ -24,7 +26,7 @@
         console.log(delta);
     });
     $('.more').on('click', function () {
-        $('.site-welcome').css('top', '-80%');
+        $('.site-welcome').css('top', '-100%');
     });
     window.addEventListener('scroll', function () {
         gear.style.transform = "rotate(" + window.pageYOffset * 0.5 + "deg)";

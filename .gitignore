@@ -1,6 +1,5 @@
-TestEquatMvc.sln
-TestEquatMvc/bin/
-TestEquatMvc/obj/Debug/
+WebSolveEquations2/bin/
+WebSolveEquations2/obj/Debug/
 *.csproj
 *.sln
  .vs/
